@@ -229,122 +229,162 @@ section #text
 
 footer
 {
-    position: relative;
-    width: 100%;
-    padding: 20px 50px;
-    background: #3586ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 100px;
+	position: relative;
+	width: 100%;
+	height: auto;
+	padding: 50px 100px;
+	background: #111;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
-footer .wave
+footer .container
 {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url(wave.png);
-    background-size: 1000px 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
-footer .wave#wave1
+.sec
 {
-    z-index: 1000;
-    opacity: 1;
-    bottom: 0;
-    animation: animate 4s linear infinite;
+	margin-right: 30px;
 }
-footer .wave#wave2
+.sec.aboutus
 {
-    z-index: 999;
-    opacity: 0.5;
-    bottom: 10px;
-    animation: animate2 4s linear infinite;
+	width: 40%;
 }
-footer .wave#wave3
+.sec h2
 {
-    z-index: 998;
-    opacity: 0.2;
-    bottom: 15px;
-    animation: animate 3s linear infinite;
+	position: relative;
+	color: #fff;
+	font-weight: 500;
+	margin-bottom: 15px;
 }
-footer .wave#wave4
+.sec h2:before
 {
-    z-index: 999;
-    opacity: 0.7;
-    bottom: 20px;
-    animation: animate2 3s linear infinite;
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 50px;
+	height: 2px;
+	background: #f00;
+}
+.sec p
+{
+	color: #999;
+}
+.sci
+{
+	margin-top: 20px;
+	display: flex;
+}
+.sci li
+{
+	list-style: none;
+}
+.sci li a
+{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	background: #222;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 10px;
+	text-decoration: none;
+	border-radius: 4px;
+}
+.sci li a:hover
+{
+	background: #f00;
+}
+.sci li a .fa
+{
+	color: #fff;
+	font-size: 20px;
+}
+.sec.quicklinks
+{
+	position: relative;
+	width: 25%;
+}
+.sec.quicklinks ul li
+{
+	list-style: none;
+}
+.sec.quicklinks ul li a
+{
+	color: #999;
+	text-decoration: none;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+.sec.quicklinks ul li a:hover
+{
+	color: #fff;
+}
+.sec.contact
+{
+	width: calc(35% - 60px);
+	margin-right: 0;
+}
+.sec.contact .info
+{
+	position: relative;
+}
+.sec.contact .info li
+{
+	display: flex;
+	margin-bottom: 16px;
+}
+.sec.contact .info li span:nth-child(1)
+{
+	color: #fff;
+	font-size: 20px;
+	margin-right: 10px;
+}
+.sec.contact .info li a
+{
+	color: #999;
+	text-decoration: none;
+}
+.sec.contact .info li a:hover
+{
+	color: #fff;
 }
 
-@keyframes animate
+
+.copyrightText
 {
-    0%,100%
-    {
-        background-position-x: 1000px;
-    }
-    100%
-    {
-        background-position-x: 0px;
-    }
-}
-@keyframes animate2
-{
-    0%,100%
-    {
-        background-position-x: 0px;
-    }
-    100%
-    {
-        background-position-x: 1000px;
-    }
-}
-.social,
-.menu
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0;
-    flex-wrap: wrap;
-}
-.social li,
-.menu li
-{
-    list-style: none;
-}
-.social li a 
-{
-    font-size: 2em;
-    color: #fff;
-    margin: 0 10px;
-    display: inline-block;
-    transition: 0.5s;
-}
-.social li a:hover 
-{
-    transform: translateY(-10px);
+	width: 100%;
+	background: #181818;
+	padding: 8px 100px;
+	text-align: center;
+	color: #999;
 }
 
-.menu li a 
+@media (max-width: 991px)
 {
-    font-size: 1.2em;
-    color: #fff;
-    opacity: 0.75;
-    margin: 0 15px;
-    text-decoration: none;
-    display: inline-block;
-}
-.menu li a:hover 
-{
-    opacity: 1;
-}
-footer p 
-{
-    color: #fff;
-    text-align: center;
-    margin-top: 15px;
-    font-size: 1.1em;
+	.sec.aboutus,
+	.sec.quicklinks,
+	.sec.contact
+	{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.sec.contact
+	{
+		margin-bottom: 0px;
+	}
+	footer
+	{
+		padding: 40px;
+	}
+	.copyrightText
+	{
+		padding: 5px 40px;
+	}
 }
