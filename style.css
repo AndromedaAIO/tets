@@ -15,11 +15,6 @@ body
   background: #fff;
   background: linear-gradient(#8b016a,#6f1159);
   min-height: 100vh;
-  font-family: 'Segoe UI';
-  font-weight: 400;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 #header
 {
@@ -72,14 +67,6 @@ section
   display: flex;
   justify-content: center;
   align-items: center;
-}
-section::before
-{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: linear-gradient(to top,#96283a,transparent);
 }
 section img
 {
